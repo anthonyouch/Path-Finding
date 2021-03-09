@@ -231,7 +231,7 @@ def astar(start, end):
 
         if current == end:
             reconstruct_path(came_from, current)
-            #start.make_start()
+            start.make_start()
             end.make_end()
             return True
 
