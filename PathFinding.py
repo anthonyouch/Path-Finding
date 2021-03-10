@@ -125,8 +125,8 @@ class Spot:
         return False
 
 def on_drag(event):
-    """ function that allows the controller to drag squares to position the
-    obstacles instead of individually cliking on it"""
+    """ function that allows the controller to drag to place the
+    obstacles instead of individually clicking each square"""
     global placing_nodestate
 
     if placing_nodestate == 3:
@@ -269,19 +269,19 @@ def clear():
 
 def make_side_buttons(rows, win):
     startnode_button = Button(win, width=10, text="Choose Start \nNode", font=("Arial", 20), command=place_startnode)
-    startnode_button.grid(row=1, column=rows + 1, rowspan=4, padx=10, ipadx=10)
+    startnode_button.grid(row=3, column=rows + 1, rowspan=4, padx=10, ipadx=10)
     endnode_button = Button(win, width=10, text="Choose End \nNode", font=("Arial", 20), command=place_endnode)
-    endnode_button.grid(row=5, column=rows + 1, rowspan=4, padx=10, ipadx=10)
+    endnode_button.grid(row=7, column=rows + 1, rowspan=4, padx=10, ipadx=10)
     wallnode_button = Button(win, width=10, text="Place \nObstacles", font=("Arial", 20), command=place_wallnode)
-    wallnode_button.grid(row=9, column=rows + 1, rowspan=4, padx=10, ipadx=10)
+    wallnode_button.grid(row=11, column=rows + 1, rowspan=4, padx=10, ipadx=10)
     start_button = Button(win, width=10, text="Visualise \nPath", font=("Arial", 20), command=start)
-    start_button.grid(row=13, column=rows + 1, rowspan=4, ipadx=10)
+    start_button.grid(row=15, column=rows + 1, rowspan=4, ipadx=10)
     erase_button= Button(win, width=9, text="Erase", font=("Arial", 23), command=erase_state)
-    erase_button.grid(row=17, column=rows + 1, rowspan=4, ipady=12, ipadx=10)
+    erase_button.grid(row=19, column=rows + 1, rowspan=4, ipady=12, ipadx=10)
     clear_button = Button(win, width=9, text="Clear", font=("Arial", 23), command=clear)
-    clear_button.grid(row=21, column=rows + 1, rowspan=4, ipadx=10, ipady=12)
-    main_menu_button = Button(win, width=10, text=" Main \nMenu", font=("Arial", 20), state = "disabled")
-    main_menu_button.grid(row=25, column=rows + 1, rowspan=4, padx=10, ipadx=10)
+    clear_button.grid(row=23, column=rows + 1, rowspan=4, ipadx=10, ipady=12)
+    #main_menu_button = Button(win, width=10, text=" Main \nMenu", font=("Arial", 20), state = "disabled")
+    #main_menu_button.grid(row=25, column=rows + 1, rowspan=4, padx=10, ipadx=10)
 
 def draw(rows, win):
     make_grids(rows, win)
